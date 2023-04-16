@@ -59,3 +59,38 @@ for (let i = 1; i < bici.length; i++) {
 }
 
 // ------------------------------- secondo snak --------------------------------------- //
+const squadre = [
+{ 
+    nome: 'Juventus', 
+    punti: 0, 
+    falli: 0 
+},
+{ 
+    nome: 'Laio',
+    punti: 0, 
+    falli: 0 
+},
+{ 
+    nome: 'Roma', 
+    punti: 0, 
+    falli: 0 
+},
+{ 
+    nome: 'Milan',
+    punti: 0, 
+    falli: 0 
+}
+];
+
+// Generare numeri casuali per i punti e i falli
+squadre.forEach(squadra => {
+  squadra.punti = Math.floor(Math.random() * 100);
+  squadra.falli = Math.floor(Math.random() * 50);
+});
+
+// Creare un nuovo array utilizzando la destrutturazione che contiene solo nome e falli
+const squadreFalli = squadre.map(({ nome, falli }) => ({ nome, falli }));
+
+// Stampa entrambi gli array in console
+console.log('Tutte le Squadre:', squadre);
+console.log('Squadre con Falli:', squadreFalli);

@@ -66,7 +66,7 @@ const squadre = [
     falli: 0 
 },
 { 
-    nome: 'Laio',
+    nome: 'Lazio',
     punti: 0, 
     falli: 0 
 },
@@ -94,3 +94,18 @@ const squadreFalli = squadre.map(({ nome, falli }) => ({ nome, falli }));
 // Stampa entrambi gli array in console
 console.log('Tutte le Squadre:', squadre);
 console.log('Squadre con Falli:', squadreFalli);
+
+
+// ------------------------------- Terzo snak --------------------------------------- //
+const arratNomi = ['paolo', 'Franco', 'Sara', 'Marta', 'michele', 'luca', 'alessandro']
+
+let min = parseInt(prompt(`inserisci un numero da 0 a ${arratNomi.length - 1}`))
+let max = parseInt(prompt(`inserisci un numero da 0 a 6`))
+
+let arrayFiltrato = arratNomi.filter((element, index) => {
+    if(min < index && max > index){
+        return element
+    }
+})
+
+console.log(arrayFiltrato)
